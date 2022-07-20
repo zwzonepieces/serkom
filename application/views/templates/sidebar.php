@@ -26,7 +26,7 @@
     <li class="nav-item">
       <a class="nav-link" href="<?= base_url('data-pengguna'); ?>">
         <i class="fas fa-fw fa-users"></i>
-        <span>Kelola Pengguna</span></a>
+        <span>Kelola Pengguna </span></a>
     </li>
 
     <!-- Menu Pengaduan -->

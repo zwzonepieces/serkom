@@ -35,24 +35,5 @@ class Admin_model extends CI_Model
         // kembalikan ke halaman pengguna
         redirect('data-pengguna');
     }
-	public function ubah_pengguna()
-    {
-        $id = $this->input->post('id');
-        $nama = $this->input->post('nama_instansi', true);
-        $email = $this->input->post('email', true);
-
-        $this->db->set('nama_instansi', $nama);
-        $this->db->set('email', $email);
-
-        $this->db->where('id', $id);
-        $query = $this->db->update('user');
-
-        if ($this->db->affected_rows($query) > 0) {
-            $this->session->set_flashdata('msg', 'diupdate.');
-            redirect('data-pengguna');
-        } else {
-            $this->session->set_flashdata('err', 'diupdate.');
-            redirect('data-pengguna');
-        }
-    }
+	
 }

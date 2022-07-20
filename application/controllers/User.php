@@ -30,17 +30,6 @@ class User extends CI_Controller
             redirect('auth/notfound');
         }
     }
-
-	public function hapus_pengaduan()
-    {
-        $id = $this->input->post('id');
-        $this->db->where('id', $id);
-        $this->db->delete('pengaduan');
-        // set session -> berhasil menghapus data
-        $this->session->set_flashdata('msg', 'dihapus.');
-        // redirect ke halaman pengaduan
-        redirect('data-pengaduan');
-    }
 	
     public function tambah_data()
     {

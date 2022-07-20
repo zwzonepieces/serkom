@@ -36,7 +36,7 @@
             <div class="card shadow">
                 <div class="card-header">
                     <button type="button" type="button" class="btn btn-primary btn-ubah"><i class="fa fa-edit"></i> Ubah Data</button>
-					<button type="button" data-toggle="modal" data-target="#modalHapus" class="btn btn-primary btn-danger" id="data-pengaduan" ><i class="fa fa-trash"></i>Hapus</button>
+
                 </div>
                 <div class="card-body">
                     <div class="table-responsive shadow-sm">
@@ -121,29 +121,6 @@
                 <button type="submit" name="ubah-data" class="btn btn-primary">Simpan Data</button>
             </div>
             <?= form_close(); ?>
-        </div>
-    </div>
-</div>
-<!-- Modal Hapus Data Pengguna -->
-<div class="modal fade" id="modalHapus" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header badge-primary">
-                <h5 class="modal-title">Hapus <?= $judul; ?></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="<?= base_url('user/hapus_pengaduan'); ?>" method="post">
-                <div class="modal-body">
-                    Apakah anda yakin ingin menghapus data ini?
-                    <input type="hidden" name="id" id="id">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Hapus</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>

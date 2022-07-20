@@ -76,12 +76,5 @@ class Admin extends CI_Controller
         // redirect ke halaman pengguna
         redirect('data-pengguna');
     }
-	public function ubah_data()
-    {
-        if (isset($_POST['ubah-pengguna'])) {
-            $this->model->ubah_pengguna();
-        } else {
-            redirect('admin/data-pengguna');
-        }
-    }
+
 }

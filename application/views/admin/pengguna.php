@@ -27,7 +27,7 @@
 
             <div class="card mt-4">
                 <div class="card-header">
-                    <a href="<?= base_url('tambah-pengguna') ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Data</a>
+                    <a href="<?= base_url('tambah-pengguna') ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm my-2"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Data </a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -59,7 +59,7 @@
                                             <td><?= $p['username']; ?></td>
                                             <td>
                                                 <a href="" data-toggle="modal" data-target="#modalHapus" class="btn btn-sm btn-danger" id="hapus-pengguna" data-id="<?= $p['id']; ?>">hapus</a>
-												<a href="" data-toggle="modal" data-target="#modalUbah" class="btn btn-sm btn-primary" id="edit-pengguna" data-id="<?= $p['id']; ?>">edit</a>
+
                                             </td>
 											
                                         </tr>
@@ -93,35 +93,7 @@
     </div>
 </footer>
 <!-- End of Footer -->
-<div class="modal fade" id="modal-ubah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header badge-primary">
-                <h5 class="modal-title">Ubah Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <?= form_open('admin/data_pengguna'); ?>
-            <div class="modal-body">
-                <input type="hidden" name="id" id="id">
-                <div class="form-group">
-                    <label for="nama">Nama Instansi</label>
-                    <input type="text" name="nama_instansi" id="instansi" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <textarea name="email" id="email" class="form-control" cols="30" rows="5"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="submit" name="ubah-data" class="btn btn-primary">Simpan Data</button>
-            </div>
-            <?= form_close(); ?>
-        </div>
-    </div>
-</div>
+
 
 <!-- Modal Hapus Data Pengguna -->
 <div class="modal fade" id="modalHapus" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
